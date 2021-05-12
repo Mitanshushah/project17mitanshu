@@ -1,0 +1,47 @@
+var cat;
+var mouse;
+
+function preload(){
+ catImage1=loadImage("cat1.png");
+mouseImage1=loadImage("mouse1.png")
+ catImage2=loadImage("cat2.png");
+mouseImage2=loadImage("mouse2.png")
+backGroundImage=loadImage("garden.png");
+}
+function setup(){
+     createCanvas(1000,800);
+ background1=createSprite(300,300,600,600);
+  background1.addImage(backGroundImage);
+  background1.scale=3;
+  background1.velocityX=2;
+
+
+mouse=createSprite(100,400);
+mouse.addImage(mouseImage1);
+mouse.scale=0.2;
+
+cat=createSprite(900,400);
+car.addImage(catImage1);
+cat.scale=0.2;
+
+}
+
+dunction draw(){
+
+if(background1.x>500){
+    background1.x=300;
+  }
+
+mouse.y=World.mouseY;
+mouse.x=World.mouseX; 
+
+if(mouse.isTouching()){
+    cat.changeImage("catImage1");
+    mouse.chanfeImage(mouseImage1);
+    
+    }
+    
+
+  drawSprites()
+}
+
